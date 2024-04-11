@@ -28,18 +28,36 @@
 // log('hello');
 
 
+// const fs=require('fs')
+
+// function ReadFile1(){
+//     return new Promise(function(resolve){
+//         fs.readFile('a.txt','utf-8',(err,data)=>{
+//             resolve(data);
+//         })
+//     })
+// }
+
+// function print(data){
+//     console.log (data);
+// }
+
+// ReadFile1().then(print);
+
+
+const { error } = require('console')
 const fs=require('fs')
 
 function ReadFile1(){
     return new Promise(function(resolve){
-        fs.readFile('a.txt','utf-8',(err,data)=>{
+        fs.readFile("a.txt",'utf-8',(error,data)=>{
             resolve(data);
         })
     })
 }
 
 function print(data){
-    console.log (data);
+    console.log(data);
 }
 
 ReadFile1().then(print);
