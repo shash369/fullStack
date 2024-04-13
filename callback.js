@@ -1,4 +1,4 @@
-//revision
+//revision 
 function squae(n){
 //    console.log('square is called');
     return n*n;
