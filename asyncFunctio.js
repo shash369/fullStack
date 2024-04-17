@@ -23,5 +23,5 @@ setTimeout(() => {
     console.log("hi there");
 }, 5000);
 
-console.log('aftert');
+console.log('afte call back');
 
