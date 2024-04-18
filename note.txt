@@ -1,0 +1,3 @@
+in the async call function the async function will only run if 
+when all the code after it is executed and only the threadd will be given to 
+the async function;
