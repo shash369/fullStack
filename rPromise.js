@@ -37,5 +37,12 @@
 //    return sub(data);}).then((data)=>{
 //     console.log(data);
 // })
-
-
+ 
+function sub(x,y){
+    return new Promise(function (resolve) {
+        resolve(x-y);
+    })
+}
+sub(30,20).then((data)=>{
+    console.log(data);
+})
