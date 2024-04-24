@@ -38,11 +38,35 @@
 //     console.log(data);
 // })
  
-function sub(x,y){
-    return new Promise(function (resolve) {
-        resolve(x-y);
+// function sub(x,y){
+//     return new Promise(function (resolve) {
+//         resolve(x-y);
+//     })
+// }
+// sub(30,20).then((data)=>{
+//     console.log(data);
+// })
+ 
+// let n=new Promise(function(resolve){
+//     resolve();
+// console.log(n);//=> primise is allready resolved
+//                //so this wiil not be printed
+//                //and function will be stuck
+// })
+// let n = new Promise((resolve)=>{
+//     resolve('Resolved Value');
+// });
+
+// n.then((data) => {
+//     console.log(data); // Log the resolved value
+// });
+
+function hello(fn){
+    fn(3+2);
+}
+async function he(){
+    hello(function(value){
+        console.log(value);
     })
 }
-sub(30,20).then((data)=>{
-    console.log(data);
-})
+he();
