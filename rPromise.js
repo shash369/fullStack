@@ -1,5 +1,7 @@
 // // //  function myPromise(a,b){
 
+const { resolve } = require("styled-jsx/css")
+
 // // //     return new Promise(function(resolve){
 // // //         resolve(a+b+b);
 // // //     })
@@ -61,12 +63,48 @@
 //     console.log(data); // Log the resolved value
 // });
 
-function hello(fn){
-    fn(3+2);
-}
-async function he(){
-    hello(function(value){
-        console.log(value);
-    })
-}
-he();
+// function hello(fn){
+//     fn(3+2);
+// }
+// async function he(){
+//     hello(function(value){
+//         console.log(value);
+//     })
+// }
+// he();
+
+// function promi(duration){
+//    return new Promise((resolve)=>{
+//       setTimeout(resolve,duration);
+//    })
+// }
+// promi(2000).then((data)=>{
+//         console.log(3+5);
+    
+// })
+
+                                                        //promise channing=>[]
+
+// function promisifed(duration){
+//     return new Promise((resolve)=>{
+//         setTimeout(resolve,duration);
+//     })
+// }
+// promisifed(2000).then(()=>{
+//     console.log("after one promise");
+//     return promisifed(4000);
+// }).then(()=>{
+//     console.log("after second promise");
+// })
+
+// function add(x,y){
+//     return new Promise((resolve)=>[
+//         resolve(x+y)
+//     ])
+// }
+// add(3,7).then((data)=>{
+//    console.log(data);
+//    return add (15,data+5)
+// }).then((data)=>{
+//     console.log(data);
+// })
