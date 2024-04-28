@@ -97,6 +97,7 @@ const { resolve } = require("styled-jsx/css")
 //     console.log("after second promise");
 // })
 
+// let x=50;
 // function add(x,y){
 //     return new Promise((resolve)=>[
 //         resolve(x+y)
@@ -104,7 +105,39 @@ const { resolve } = require("styled-jsx/css")
 // }
 // add(3,7).then((data)=>{
 //    console.log(data);
-//    return add (15,data+5)
+//    return add (x,data+5)
 // }).then((data)=>{
 //     console.log(data);
 // })
+                                        // function square(x){
+                                        //     return x*x;
+                                        // }
+
+                                        // function add(x,y){
+                                        //     return x+y;
+                                        // }
+
+                                        // function some(x,y,fn,fn2){
+                                        //     return fn(x)+fn2(x,y);
+                                        // }
+                                        // let z=some(5,5,square,add)
+                                        // console.log(z);
+
+  
+ 
+// function xm(x){
+//      return x*x;
+// }                                        
+// function sumOfsquare(x,y,fn){
+//    let val =xm(x);
+//    let val2=y*y;  
+//     console.log(val+val2);
+// }               
+// sumOfsquare(5,4,xm)
+
+function Sumofsomething(x,y,fn){
+   fn(x*x+y*y);
+}
+Sumofsomething(4,9,data=>{
+    console.log(data);
+})
