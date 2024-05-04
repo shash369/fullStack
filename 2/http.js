@@ -16,5 +16,5 @@ app.put('/edit/:som',(req,res)=>{
   res.json(todo);
 })
 app.listen(port,()=>{
-    console.log("server is at port 4000");
+    console.log("server at port 4000");
 } ) 
