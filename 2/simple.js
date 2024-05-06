@@ -16,7 +16,7 @@ app.post('/',(req,res)=>{
    todo.push(todo1);
    res.json(todo1);
 })
-// new will be added
+// new line is added
 app.listen(port,()=>{
     console.log("server is connected");
 })
