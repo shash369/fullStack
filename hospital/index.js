@@ -1,39 +1,45 @@
-const express=require('express')
-const app=express();
-const port=4000;
-const user=[{
-    name:"jhon",
-    kidneys:[{
-        healthy:true
-    },{
-        healthy:true
+const express = require('express');
+const app = express();
+const port = 4000;
+
+const user = [{
+    name: "jhon",
+    kidney: [{
+        healthy: true
+    }, {
+        healthy: true
     }]
-}]
-app.get('/',(req,res)=>{
-    let kid=user[0].kidneys;
-    // let stat=user[0].kidneys[req.query.n];
-    let numberOfHealthy=0;
-    for (let i = 0; i < kid.length; i++) {
-        if (kid[i].healthy) {
-            numberOfHealthy=numberOfHealthy+1;
+}];
+
+app.get('/', (req, res) => {
+    let kidneys = user[0].kidney;
+    let numberOfHealthy = 0;
+
+    for (let i = 0; i < kidneys.length; i++) {
+        if (kidneys[i].healthy) {
+            numberOfHealthy++;
         }
     }
-    
-    let noKid=kid.length;
-    let healthy=kid[0].healthy;
-    let numberOfUnhealthy=noKid-healthy;
-    res.json({noKid,healthy,numberOfHealthy})
-})
-app.post("/",(req,res)=>{
 
-})
-app.put("/",(req,res)=>{
+    let numberOfKidneys = kidneys.length;
+    let numberOfUnhealthy = numberOfKidneys - numberOfHealthy;
+    let allHealthy = numberOfHealthy === numberOfKidneys;
 
-})
-app.delete("/",(req,res)=>{
+    res.json({ numberOfKidneys, allHealthy, numberOfHealthy, numberOfUnhealthy });
+});
 
-})
+app.post("/", (req, res) => {
+    // Handle POST request
+});
 
-app.listen(port,()=>{
+app.put("/", (req, res) => {
+    // Handle PUT request
+});
+
+app.delete("/", (req, res) => {
+    // Handle DELETE request
+});
+
+app.listen(port, () => {
     console.log("connected");
-})
+});
