@@ -8,7 +8,7 @@ const sum={
     "z":"maha kaal"
 }
 app.get('/',(req,res)=>{
-    res.status(369).json(todo);
+    res.status(369).json(todo );
 })
 app.put('/edit/:som',(req,res)=>{
   todo.push(sum);
