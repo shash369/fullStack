@@ -1,12 +1,11 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 const port = 4000;
-
+app.use(bodyParser.json())
 const user = [{
     name: "jhon",
     kidney: [{
-        healthy: true
-    }, {
         healthy: true
     }]
 }];
@@ -20,16 +19,22 @@ app.get('/', (req, res) => {
             numberOfHealthy++;
         }
     }
-
     let numberOfKidneys = kidneys.length;
     let numberOfUnhealthy = numberOfKidneys - numberOfHealthy;
-    let allHealthy = numberOfHealthy === numberOfKidneys;
+    let allHealthy = numberOfHealthy === numberOfKidneys;//return true in the case of true
 
     res.json({ numberOfKidneys, allHealthy, numberOfHealthy, numberOfUnhealthy });
 });
 
 app.post("/", (req, res) => {
     // Handle POST request
+    const isHealthy = req.body.ishealthy; // Assuming your request body has an "ishealthy" field
+    
+        user[0].kidney.push({
+            healthy:isHealthy
+        })
+    
+   res.send("done");
 });
 
 app.put("/", (req, res) => {
