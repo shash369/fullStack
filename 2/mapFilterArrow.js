@@ -13,10 +13,9 @@ function transform(i){
 // let z=arr.map(transform);
 let z=arr.map((i)=>
              i*4)
-console.log(z)
-
+//console.log(z)
 //filtter
 let arr2=[10,2,4,5,10]
-let m=arr.filter((i)=>
-i==10)
-// console.log(m);
+let m=arr2.filter((i)=>
+i%2==0)
+console.log(m);
