@@ -7,7 +7,7 @@ app.get("/",(req,res)=>{
    let n=req.query.n;//takes val form the search bar
     res.send(n);
 })
-    
+     
 app.listen(port,()=>{
     console.log(`connected at ${port}`);
 }) 
