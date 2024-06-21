@@ -2,4 +2,4 @@ ZOD IS VERY STTRICT IT WILL GIVE
 
 schema.parce(121) =>error but if you use 
 
-const schemaz.coercce.string()=>it will allow it to parce
+const schemaz.coercce.string()=>it will allow it to parce   
