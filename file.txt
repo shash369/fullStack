@@ -1,1 +1,3 @@
 ECHO is on.
+\\hashing is one way encrption is two way that means
+has cant be converteed back  yo string
