@@ -15,13 +15,6 @@
     </h6>
     <script>
        async function getapidata() {
-            //fetch("https://fakerapi.it/api/v1/persons")
-          //      .then(function(res) {
-              //      return res.json();
-                //})
-                //.then(function(data) {
-                  //  document.getElementsByClassName("data-c")[0].innerHTML=JSON.stringify(data);
-                //})
                 const res= await fetch("https://fakerapi.it/api/v1/persons");
                 const finalres=await res.json();
                 document.getElementsByClassName("data-c")[0].innerHTML=JSON.stringify(finalres);
