@@ -7,4 +7,4 @@ async function sleep(time){
 let time=Date.now();
 sleep(100).then(()=>{
     console.log(Date.now()-time)
-})
+}) 
