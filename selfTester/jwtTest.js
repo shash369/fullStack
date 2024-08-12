@@ -4,7 +4,6 @@ const app = express();
 app.use(express.json());
 const PORT = 5100;
 const JWT_PASS = "123456789";
-
 const ALL_USERS = [
     {
         name: "RAM",
