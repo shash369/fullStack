@@ -18,7 +18,6 @@ const ALL_USERS = [
         pass: "12345"
     }
 ]
-
 function userExists(username, password) {
     let userExists = false;
     for (let i = 0; i < ALL_USERS.length; i++) {
@@ -51,7 +50,6 @@ app.get('/signin', (req, res) => {
         });
     }
 });
-
 app.post("/valid", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
